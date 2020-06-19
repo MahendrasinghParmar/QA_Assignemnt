@@ -1,0 +1,31 @@
+package PrimeNumber100;
+
+public class PrimeNumbers100 {
+
+	public static void main(String[] args) 
+	{
+
+	      int status = 1;
+	      int k = 3;
+	      System.out.println("First 100 prime numbers are:");   
+	      System.out.println(2);
+	      for ( int i = 2 ; i <=100 ;  )
+	      {
+	         for ( int j = 2 ; j <= Math.sqrt(k) ; j++ )
+	         {
+	            if ( k%j == 0 )
+	            {
+	               status = 0;
+	               break;
+	            }
+	         }
+	         if ( status != 0 )
+	         {
+	            System.out.println(k);
+	            i++;
+	         }
+	         status = 1;
+	         k++;
+	      }         
+	   }
+	}
