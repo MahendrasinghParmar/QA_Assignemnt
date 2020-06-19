@@ -1,0 +1,12 @@
+SELECT Employee.EmpName, Salary.Salary
+FROM Employee
+INNER JOIN Salary ON Employee.EmpID=Salary.EmpID 
+ORDER BY Salary DESC LIMIT n-1,1;
+
+
+
+UPDATE Salary 
+RIGHT JOIN Employee ON salary.EmpID = Employee.EmpID
+SET salary = Salary+5000 
+WHERE Employee.Date_of_birth in
+(SELECT Date_of_birth FROM employee WHERE YEAR(CURRENT_DATE())-YEAR(Date_of_birth)>30);
